@@ -20,9 +20,9 @@ struct ContentView: View {
     struct styleLabel: ViewModifier {
         func body(content: Content) -> some View{
             return content
-            .foregroundColor(Color.white)
-            .modifier(shadowStyle())
-            .font(Font.custom("Euphemia UCAS", size: 18))
+                .foregroundColor(Color.white)
+                .modifier(shadowStyle())
+                .font(Font.custom("Euphemia UCAS", size: 18))
         }
         
     }
@@ -30,26 +30,26 @@ struct ContentView: View {
     struct valueLabel: ViewModifier {
         func body(content: Content) -> some View{
             return content
-            .foregroundColor(Color.yellow)
-            .modifier(shadowStyle())
-            .font(Font.custom("Euphemia UCAS", size: 24))
+                .foregroundColor(Color.yellow)
+                .modifier(shadowStyle())
+                .font(Font.custom("Euphemia UCAS", size: 24))
         }
         
     }
-  
+    
     struct shadowStyle: ViewModifier {
-              func body(content: Content) -> some View{
-                  return content
-                  .shadow(color: Color.black, radius: 5, x: 2, y: 2)
-            }
-              
+        func body(content: Content) -> some View{
+            return content
+                .shadow(color: Color.black, radius: 5, x: 2, y: 2)
+        }
+        
     }
     
     struct buttonLargeLabelStyle: ViewModifier {
         func body(content: Content) -> some View{
             return content
-            .foregroundColor(Color.black)
-            .font(Font.custom("Euphemia UCAS", size: 18))
+                .foregroundColor(Color.black)
+                .font(Font.custom("Euphemia UCAS", size: 18))
         }
         
     }
@@ -57,8 +57,8 @@ struct ContentView: View {
     struct buttonSmallLabelStyle: ViewModifier {
         func body(content: Content) -> some View{
             return content
-            .foregroundColor(Color.black)
-            .font(Font.custom("Euphemia UCAS", size: 12))
+                .foregroundColor(Color.black)
+                .font(Font.custom("Euphemia UCAS", size: 12))
         }
         
     }
@@ -82,12 +82,12 @@ struct ContentView: View {
             }
             //button row
             
-                Button(action: {
-                    print("Button clicked")
-                    self.alertIsVisible = true
-                }) {
-                    Text("Hit me!")
-                    }.modifier(buttonLargeLabelStyle())
+            Button(action: {
+                print("Button clicked")
+                self.alertIsVisible = true
+            }) {
+                Text("Hit me!")
+            }.modifier(buttonLargeLabelStyle())
                 .alert(isPresented: $alertIsVisible) { () -> Alert in
                     return Alert(title: Text(alertTitle()), message: Text(
                         "There slider's value is \(sliderValueRounded()).\n" + "You scored \(pointsForCurrentRound()) points in this round."), dismissButton: .default(Text("Osom!")) {
@@ -95,7 +95,7 @@ struct ContentView: View {
                             self.target = Int.random(in: 1...100)
                             self.round = self.round + 1
                         })
-                    }.background(Image("Button")).modifier(shadowStyle())
+            }.background(Image("Button")).modifier(shadowStyle())
             Spacer()
             
             //main info
@@ -105,8 +105,8 @@ struct ContentView: View {
                     self.startNewGame()
                 }) {
                     HStack {
-                    Image("StartOverIcon").accentColor(slightlyDesaturatedBlue)
-                    Text("Start over").modifier(buttonSmallLabelStyle())
+                        Image("StartOverIcon").accentColor(slightlyDesaturatedBlue)
+                        Text("Start over").modifier(buttonSmallLabelStyle())
                     }
                 }.background(Image("Button")).modifier(shadowStyle())
                 
@@ -117,10 +117,10 @@ struct ContentView: View {
                 Text("Round:").modifier(styleLabel())
                 Text("\(round)").modifier(valueLabel())
                 Spacer()
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                NavigationLink(destination: AboutView()){
                     HStack {
-                    Image("InfoIcon").accentColor(slightlyDesaturatedBlue)
-                    Text("Info").modifier(buttonSmallLabelStyle())
+                        Image("InfoIcon").accentColor(slightlyDesaturatedBlue)
+                        Text("Info").modifier(buttonSmallLabelStyle())
                     }
                     
                 }.background(Image("Button")).modifier(shadowStyle())
@@ -128,6 +128,7 @@ struct ContentView: View {
             .padding(.bottom, 20)
         }
         .background(slightlyDesaturatedBlue)
+        .navigationBarTitle("BullsEyes")
     }
     
     func sliderValueRounded() -> Int {
@@ -179,6 +180,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().previewLayout(.fixed(width: 736, height:414))
+        ContentView().previewLayout(.fixed(width: 736, height: 414))
     }
 }

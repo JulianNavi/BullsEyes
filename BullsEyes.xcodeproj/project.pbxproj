@@ -13,6 +13,7 @@
 		51671D6D250653B5001ABC5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51671D6C250653B5001ABC5D /* Assets.xcassets */; };
 		51671D70250653B5001ABC5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51671D6F250653B5001ABC5D /* Preview Assets.xcassets */; };
 		51671D73250653B5001ABC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51671D71250653B5001ABC5D /* LaunchScreen.storyboard */; };
+		51B26FBB253C556200FCDEE7 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B26FBA253C556200FCDEE7 /* AboutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		51671D6F250653B5001ABC5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		51671D72250653B5001ABC5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51671D74250653B5001ABC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51B26FBA253C556200FCDEE7 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				51671D66250653B3001ABC5D /* AppDelegate.swift */,
 				51671D68250653B3001ABC5D /* SceneDelegate.swift */,
 				51671D6A250653B3001ABC5D /* ContentView.swift */,
+				51B26FBA253C556200FCDEE7 /* AboutView.swift */,
 				51671D6C250653B5001ABC5D /* Assets.xcassets */,
 				51671D71250653B5001ABC5D /* LaunchScreen.storyboard */,
 				51671D74250653B5001ABC5D /* Info.plist */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B26FBB253C556200FCDEE7 /* AboutView.swift in Sources */,
 				51671D67250653B3001ABC5D /* AppDelegate.swift in Sources */,
 				51671D69250653B3001ABC5D /* SceneDelegate.swift in Sources */,
 				51671D6B250653B3001ABC5D /* ContentView.swift in Sources */,
