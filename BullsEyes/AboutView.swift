@@ -43,12 +43,12 @@ struct AboutView: View {
     
     var body: some View {
             VStack {
-                Text("🤘 Bullseyes 🎯").modifier(headerLabel())
+                Text("🤘 Bull's Eyes 🎯").modifier(headerLabel())
                 Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.").modifier(paragraphLabel())
                 Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.").modifier(paragraphLabel())
                 Text("Fun with Bulleyes! 👁").modifier(paragraphLabel())
             }
-            .navigationBarTitle("About BullsEyes")
+            .navigationBarTitle("About Bull's Eyes")
             .background(veryPaleOrange)
     }
 }

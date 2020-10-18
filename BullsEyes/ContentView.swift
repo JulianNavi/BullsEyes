@@ -128,7 +128,7 @@ struct ContentView: View {
             .padding(.bottom, 20)
         }
         .background(slightlyDesaturatedBlue)
-        .navigationBarTitle("BullsEyes")
+        .navigationBarTitle("Bull's Eyes")
     }
     
     func sliderValueRounded() -> Int {
